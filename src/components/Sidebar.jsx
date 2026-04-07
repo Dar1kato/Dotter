@@ -28,9 +28,9 @@ export default function Sidebar({ painted, selectedColor, onSelectColor, erasing
   return (
     <aside className={styles.sidebar}>
 
-      {/* Paleta */}
+      {/* Pallet */}
       <section className={styles.section}>
-        <p className={styles.label}>Color activo</p>
+        <p className={styles.label}>Active Color</p>
         <div className={styles.paletteGrid}>
           {COLORS.map(c => (
             <button
@@ -45,28 +45,28 @@ export default function Sidebar({ painted, selectedColor, onSelectColor, erasing
         </div>
       </section>
 
-      {/* Herramientas */}
+      {/* Tools */}
       <section className={styles.section}>
-        <p className={styles.label}>Herramientas</p>
+        <p className={styles.label}>Tools</p>
         <div className={styles.toolsRow}>
           <button
             className={`${styles.toolBtn} ${erasing ? styles.toolActive : ''}`}
             onClick={onToggleEraser}
           >
-            {erasing ? '✕ Borrar activo' : 'Borrar'}
+            {erasing ? '✕ Erase Active' : 'Erase'}
           </button>
           <button className={`${styles.toolBtn} ${styles.toolDanger}`} onClick={onClear}>
-            Limpiar todo
+            Clean
           </button>
         </div>
       </section>
 
       {/* Stats */}
       <section className={styles.section}>
-        <p className={styles.label}>Puntos pintados</p>
+        <p className={styles.label}>Painted Dots</p>
         <div className={styles.chips}>
           {Object.entries(byColor).length === 0 ? (
-            <p className={styles.empty}>Sin puntos aún</p>
+            <p className={styles.empty}>No Dots...</p>
           ) : (
             Object.entries(byColor).map(([colorId, pts]) => {
               const c = COLORS.find(x => x.id === colorId);
@@ -80,15 +80,15 @@ export default function Sidebar({ painted, selectedColor, onSelectColor, erasing
             })
           )}
         </div>
-        <p className={styles.statTotal}>{total} punto{total !== 1 ? 's' : ''} en total</p>
+        <p className={styles.statTotal}>{total} dot{total !== 1 ? 's' : ''} in total</p>
       </section>
 
       {/* Output JSON */}
       <section className={`${styles.section} ${styles.outputSection}`}>
         <div className={styles.outputHeader}>
-          <p className={styles.label} style={{ marginBottom: 0 }}>Coordenadas JSON</p>
+          <p className={styles.label} style={{ marginBottom: 0 }}>Coordinates JSON</p>
           <button className={`${styles.copyBtn} ${copied ? styles.copyBtnCopied : ''}`} onClick={handleCopy}>
-            {copied ? '✓ COPIADO' : 'COPIAR'}
+            {copied ? '✓ Copied' : 'Copy'}
           </button>
         </div>
         <pre className={styles.pre}>{jsonStr}</pre>

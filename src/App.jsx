@@ -26,7 +26,7 @@ export default function App() {
 
   const handleClear = () => {
     if (Object.keys(painted).length === 0) return;
-    if (window.confirm('¿Limpiar todos los puntos?')) setPainted({});
+    if (window.confirm('Clear all painted dots?')) setPainted({});
   };
 
   const handleToggleEraser = () => setErasing(e => !e);
@@ -35,11 +35,11 @@ export default function App() {
     <div className={styles.layout}>
       <header className={styles.header}>
         <div className={styles.logo}>
-          Petri<span className={styles.logoSlash}>/</span>Paint
+          Dotter <span className={styles.logoSlash}> / </span> Fab Lab Puebla
         </div>
         <div className={styles.headerMeta}>
-          {Object.keys(painted).length} punto{Object.keys(painted).length !== 1 ? 's' : ''} pintados
-          {erasing && <span className={styles.erasingBadge}>modo borrar</span>}
+          {Object.keys(painted).length} dot{Object.keys(painted).length !== 1 ? 's' : ''} painted
+          {erasing && <span className={styles.erasingBadge}>Erase Mode</span>}
         </div>
       </header>
 
@@ -52,7 +52,7 @@ export default function App() {
             erasing={erasing}
           />
           <p className={styles.hint}>
-            {erasing ? 'clic para borrar puntos' : 'clic o arrastra para pintar'}
+            {erasing ? 'Clic to erase' : 'Clic or drag to paint'}
           </p>
         </main>
 

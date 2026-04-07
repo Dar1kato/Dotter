@@ -1,14 +1,14 @@
 export const COLORS = [
-  { id: 'rojo',     name: 'Rojo',     hex: '#e05252' },
-  { id: 'naranja',  name: 'Naranja',  hex: '#e8883a' },
-  { id: 'amarillo', name: 'Amarillo', hex: '#e8cc3a' },
-  { id: 'verde',    name: 'Verde',    hex: '#5dbf5a' },
-  { id: 'menta',    name: 'Menta',    hex: '#5ab89e' },
-  { id: 'azul',     name: 'Azul',     hex: '#4a90d9' },
-  { id: 'morado',   name: 'Morado',   hex: '#9b7fe8' },
-  { id: 'rosa',     name: 'Rosa',     hex: '#d45fa0' },
-  { id: 'blanco',   name: 'Blanco',   hex: '#e8e6e0' },
-  { id: 'negro',    name: 'Negro',    hex: '#3a3b3e' },
+  { id: 'red',     name: 'Red',     hex: '#e05252' },
+  { id: 'orange',  name: 'Orange',  hex: '#e8883a' },
+  { id: 'yellow', name: 'Yellow', hex: '#e8cc3a' },
+  { id: 'green',    name: 'Green',    hex: '#5dbf5a' },
+  { id: 'mint',    name: 'Mint',    hex: '#5ab89e' },
+  { id: 'blue',     name: 'Blue',     hex: '#4a90d9' },
+  { id: 'purple',   name: 'Purple',   hex: '#9b7fe8' },
+  { id: 'pink',     name: 'Pink',     hex: '#d45fa0' },
+  { id: 'white',   name: 'White',   hex: '#e8e6e0' },
+  { id: 'black',    name: 'Black',    hex: '#3a3b3e' },
 ];
 
 export const GRID_HALF = 6;       // radio en celdas (total: 2*6+1 = 13)
