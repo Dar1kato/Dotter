@@ -1,0 +1,171 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-left: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.section {
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+/* Paleta */
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.swatch {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s, border-color 0.12s, box-shadow 0.12s;
+  outline: none;
+}
+.swatch:hover {
+  transform: scale(1.1);
+}
+.swatchActive {
+  border-color: var(--text);
+  transform: scale(1.15);
+  box-shadow: 0 0 0 3px rgba(230,227,220,0.12);
+}
+
+/* Herramientas */
+.toolsRow {
+  display: flex;
+  gap: 8px;
+}
+.toolBtn {
+  flex: 1;
+  padding: 8px 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  background: var(--surface2);
+  color: var(--muted2);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.toolBtn:hover {
+  border-color: #555;
+  color: var(--text);
+}
+.toolActive {
+  border-color: var(--accent-dim) !important;
+  color: var(--accent) !important;
+  background: rgba(184,240,74,0.06) !important;
+}
+.toolDanger:hover {
+  border-color: #c0392b;
+  color: #e74c3c;
+}
+
+/* Chips de estadísticas */
+.chips {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.chipDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.chipName {
+  font-size: 12px;
+  color: var(--text);
+  flex: 1;
+}
+.chipCount {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+.statTotal {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: right;
+}
+.empty {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Output JSON */
+.outputSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.outputHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.copyBtn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  padding: 4px 12px;
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.copyBtn:hover {
+  border-color: var(--accent-dim);
+  color: var(--accent);
+}
+.copyBtnCopied {
+  border-color: var(--accent-dim);
+  color: var(--accent);
+}
+.pre {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: #8aad5a;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 80px;
+  max-height: 240px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
