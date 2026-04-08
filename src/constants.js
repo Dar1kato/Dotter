@@ -11,14 +11,14 @@ export const COLORS = [
   { id: 'black',    name: 'Black',    hex: '#3a3b3e' },
 ];
 
-export const GRID_HALF = 6;       // radio en celdas (total: 2*6+1 = 13)
-export const SPACING   = 34;      // px entre puntos
-export const DOT_R     = 4.5;     // radio del punto en reposo
-export const DOT_R_HOV = 6.5;     // radio al hover
-export const CANVAS_SIZE = 460;
+export const GRID_HALF = 11;      // Radius
+export const SPACING   = 34;      // Dot Spacing
+export const DOT_R     = 4.5;     // Dot radius (idle)
+export const DOT_R_HOV = 6.5;     // Dot radius (hover)
+export const CANVAS_SIZE = 800;   // Canvas width and height
 export const CENTER = CANVAS_SIZE / 2;
 
-/** Genera todos los puntos dentro del disco */
+
 export function generatePoints() {
   const pts = [];
   for (let row = -GRID_HALF; row <= GRID_HALF; row++) {

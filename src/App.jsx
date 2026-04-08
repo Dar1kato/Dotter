@@ -35,7 +35,7 @@ export default function App() {
     <div className={styles.layout}>
       <header className={styles.header}>
         <div className={styles.logo}>
-          Dotter <span className={styles.logoSlash}> / </span> Fab Lab Puebla
+          Dotter <span className={styles.logoSlash}> / </span> Fablab Puebla
         </div>
         <div className={styles.headerMeta}>
           {Object.keys(painted).length} dot{Object.keys(painted).length !== 1 ? 's' : ''} painted
