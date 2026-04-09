@@ -3,6 +3,7 @@ import PetriCanvas from './components/PetriCanvas';
 import Sidebar from './components/Sidebar';
 import { COLORS } from './constants';
 import styles from './App.module.css';
+import { FaGithub } from "react-icons/fa";
 
 export default function App() {
   const [painted, setPainted] = useState({});
@@ -37,9 +38,11 @@ export default function App() {
         <div className={styles.logo}>
           Dotter <span className={styles.logoSlash}> / </span> Fablab Puebla
         </div>
+
         <div className={styles.headerMeta}>
-          {Object.keys(painted).length} dot{Object.keys(painted).length !== 1 ? 's' : ''} painted
-          {erasing && <span className={styles.erasingBadge}>Erase Mode</span>}
+          <a className={styles.logo} href='https://github.com/Dar1kato/Dotter' rel='noopener noreferrer'>
+            <FaGithub size={30} />
+          </a>
         </div>
       </header>
 

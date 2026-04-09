@@ -5,7 +5,7 @@ import styles from './Sidebar.module.css';
 export default function Sidebar({ painted, selectedColor, onSelectColor, erasing, onToggleEraser, onClear }) {
   const [copied, setCopied] = useState(false);
 
-  // Agrupar por color
+  // Group by Color
   const byColor = {};
   for (const [key, hex] of Object.entries(painted)) {
     const [col, row] = key.split(',').map(Number);
@@ -94,6 +94,12 @@ export default function Sidebar({ painted, selectedColor, onSelectColor, erasing
         <pre className={styles.pre}>{jsonStr}</pre>
       </section>
 
+      <section className={styles.section}>
+        <p className={styles.label}>Ready to continue?</p>
+        <button className={`${styles.copyBtn} ${copied ? styles.copyBtnCopied : ''}`} onClick={() => window.open('https://dotter-g-plotter.vercel.app/', '_blank')}>
+          Get your GCode Here
+        </button>
+      </section>
     </aside>
   );
 }
